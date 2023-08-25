@@ -5,7 +5,7 @@ Every build system has a different approach to handling the tasks that you need 
 
 `run` is a 9 line bash script. Installation is easy, you just copy and paste the script into a file on your path. Or just execute these commands:
 ```bash
-TODO
+curl https://raw.githubusercontent.com/akriegman/run/main/run >~/bin/run ; chmod +x ~/bin/run
 ```
 Or, if you have a project with a runfile but you don't have `run` installed, you just run the tasks as  ordinary bash functions, for example:
 ```bash
