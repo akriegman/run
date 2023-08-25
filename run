@@ -1,0 +1,9 @@
+#!/bin/bash
+
+. ./runfile
+
+if test -z "$1"; then
+  all
+else
+  $1 ${*:2}
+fi
