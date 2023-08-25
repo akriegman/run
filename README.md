@@ -3,6 +3,8 @@ Every build system has a different approach to handling the tasks that you need 
 
 `run` is intended to be a more unified solution to the common scenario of "I have some tasks that I want to run often in this directory". The idea is that you write your tasks as regular bash functions in a file named `runfile` in the directory where you plan to run them. Then you use `run` to run tasks from your runfile. The tasks are ordinary bash, because `make` somehow has a language even worse than bash. Similar to `make`, if you execute `run` with no arguments then it runs the task called `all`. `run` also lets you pass arguments to your tasks.
 
+## Installation
+
 `run` is a 9 line bash script. Installation is easy, you just copy and paste the script into a file on your path. This command will do it for you:
 ```bash
 curl https://raw.githubusercontent.com/akriegman/run/main/run >~/bin/run ; chmod +x ~/bin/run
@@ -12,7 +14,12 @@ Or, if you have a project with a runfile but you don't have `run` installed, you
 $ . runfile
 $ all
 ```
-This has the disadvantage of poluting your bash session.
+This has the disadvantage of polluting your bash session.
+
+## Example
+Here's an example `runfile` from a project of mine: https://github.com/akriegman/electro/blob/main/runfile
+
+## Notes
 
 Many people prefer `Makefile` over `makefile` because it appears higher in most file explorers. As a terminal user, this doesn't help me as `ls` doesn't put all the capitalized files before the lowercase ones. Further, `Makefile` is harder to type and uglier than `makefile`. For these reasons I prefer lowercase, and I guess for simplicity `run` only acknowledges `runfile`s, not `Runfile`s.
 
