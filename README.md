@@ -21,6 +21,8 @@ Here's an example `runfile` from a project of mine: https://github.com/akriegman
 
 ## Notes
 
+Including a hashbang `#!/bin/bash` on the first line of your `runfile` may help your editor recognize your `runfile` as bash for syntax highlighting and formatting. This hashbang will not be used with either invocation method, however.
+
 Many people prefer `Makefile` over `makefile` because it appears higher in most file explorers. As a terminal user, this doesn't help me as `ls` doesn't put all the capitalized files before the lowercase ones. Further, `Makefile` is harder to type and uglier than `makefile`. For these reasons I prefer lowercase, and I guess for simplicity `run` only acknowledges `runfile`s, not `Runfile`s.
 
 https://github.com/TekWizely/run and https://github.com/simpzan/run had the same idea as me with the same name. My version is the most minimal of the three, but if you want more features then check them out.
