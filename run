@@ -3,7 +3,7 @@
 . ./runfile
 
 if test -z "$1"; then
-  all
+  run
 else
   $1 ${*:2}
 fi
