@@ -1,11 +1,11 @@
 # run
 Every build system has a different approach to handling the tasks that you need to run often for your project. With `make` each task would become a different recipe. With `npm` you would use `npm run`. With `cargo` the most common tasks are a subcommand. But then say you have an uncommon thing you need to do a lot, or you need to pass an extra argument to `cargo run` every time, then `cargo` can't help you with that. So I often find myself creating a `makefile` for my Rust projects. But then if I want to be able to pass arguments to the recipes, `make` doesn't allow for that. The whole thing is a big mess.
 
-`run` is intended to be a more unified solution to the common scenario of "I have some tasks that I want to run often in this directory". The idea is that you write your tasks as regular bash functions in a file named `runfile` in the directory where you plan to run them. Then you use `run` to run tasks from your runfile. Similar to `make`, if you execute `run` with no arguments then it runs the task called `run`. `run` also lets you pass arguments to your tasks.
+`run` is intended to be a more unified solution to the common scenario of "I have some tasks that I want to run often in this directory". The idea is that you write your tasks as regular bash functions in a file named `runfile` in the directory where you plan to run them. Then you use `run` to run tasks from your runfile. If you execute `run` with no arguments then it runs the task called `run`, like `make` does with the first recipe. `run` also lets you pass arguments to your tasks.
 
 ## Installation
 
-`run` is a 9 line bash script. Installation is easy, you can just copy and paste the script into a file on your path. This command will do it for you:
+`run` is an 11 line bash script. Installation is easy, you can just copy and paste the script into a file on your path. This command will do it for you:
 ```bash
 curl https://raw.githubusercontent.com/akriegman/run/main/run >~/bin/run ; chmod +x ~/bin/run
 ```
