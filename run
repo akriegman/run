@@ -1,10 +1,11 @@
 #!/bin/bash
 
-set -x
 . ./runfile
 
-if test -z "$1"; then
+if test -z "$1" && declare -F run; then
+  set -x
   run
 else
+  set -x
   $1 ${*:2}
 fi
