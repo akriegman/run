@@ -5,7 +5,7 @@ Every build system has a different approach to handling the tasks that you need 
 
 ## Installation
 
-`run` is an 11 line bash script. Installation is easy, you can just copy and paste the script into a file on your path. This command will do it for you:
+`run` is a 12 line bash script. Installation is easy, you can just copy and paste the script into a file on your path. This command will do it for you:
 ```bash
 curl https://raw.githubusercontent.com/akriegman/run/main/run >~/bin/run ; chmod +x ~/bin/run
 ```
