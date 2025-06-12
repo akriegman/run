@@ -3,7 +3,7 @@
 set -e
 . ./runfile
 
-if test -z "$1" && declare -F run; then
+if [ -z "$1" ] && declare -F run; then
   set -x
   run
 else
