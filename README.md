@@ -14,7 +14,10 @@ Or, if you have a project with a runfile but you don't have `run` installed, you
 $ . runfile
 $ run
 ```
-This has the disadvantage of polluting your bash session.
+This has the disadvantage of polluting your bash session, but you can get around this by using a subshell:
+```bash
+$ ( . runfile && run )
+```
 
 ## Example
 Here's an example `runfile` from a project of mine: https://github.com/akriegman/electro/blob/main/runfile
